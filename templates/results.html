@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="results-head">
+  <h2>Top Recommendations</h2>
+  <p>{{ selected.category }} | ${{ selected.min_budget }} - ${{ selected.max_budget }} | {{ selected.priority|title }} | {{ selected.usage|title }}</p>
+</section>
+
+{% if recommendations %}
+<div class="results-grid">
+  {% for item in recommendations %}
+  <article class="product-card">
+    <h3>{{ item.name }}</h3>
+    <p class="price">${{ '%.2f'|format(item.price) }}</p>
+    <p class="stars">{{ '★' * (item.rating|round|int) }}{{ '☆' * (5 - (item.rating|round|int)) }} <span>{{ '%.1f'|format(item.rating) }}</span></p>
+    <p class="insight">{{ item.insight }}</p>
+    <p class="reason">{{ item.explanation }}</p>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">
+  <h3>No matching products found</h3>
+  <p>Try widening your budget or choosing another category.</p>
+</div>
+{% endif %}
+{% endblock %}
