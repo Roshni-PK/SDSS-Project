@@ -1,0 +1,9 @@
+name,category,price,rating,review_count,performance_score,battery_score,camera_score,value_score,usage_tags,review_highlight
+Apex Pro 15,Laptop,1299,4.6,1240,4.8,4.3,3.9,4.1,"gaming,daily","Handles AAA games smoothly with excellent thermal control."
+LiteBook Air 14,Laptop,899,4.5,980,4.1,4.8,3.7,4.5,"office,daily","Lightweight and reliable, ideal for long office sessions."
+BudgetFlex 13,Laptop,649,4.3,860,3.9,4.2,3.5,4.7,"office,daily","Great value and dependable performance for routine work."
+Titan X Phone,Phone,999,4.7,1540,4.6,4.4,4.8,4.2,"daily,gaming","Flagship camera and fast processor loved by power users."
+SnapMax One,Phone,799,4.5,1100,4.2,4.5,4.6,4.4,"daily,office","All-day battery and sharp photos in all lighting conditions."
+ValueCam Neo,Phone,499,4.2,760,3.8,4.1,4.4,4.8,"daily,office","Affordable phone with surprisingly strong camera quality."
+GamePulse 27,Monitor,379,4.6,640,4.7,3.5,3.3,4.4,"gaming,daily","High refresh rate and low latency for competitive gaming."
+OfficeView 24,Monitor,219,4.4,520,3.9,3.7,3.1,4.6,"office,daily","Crisp display with excellent value for productivity setups."

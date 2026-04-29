@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-card">
+  <h2>Retail Recommendation Engine</h2>
+  <form method="POST" action="{{ url_for('recommend') }}" class="recommend-form">
+    <label>Product Category
+      <select name="category" required>
+        {% for c in categories %}
+        <option value="{{ c }}">{{ c }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <label>Minimum Budget ($)
+      <input type="number" name="min_budget" value="300" min="0" required>
+    </label>
+
+    <label>Maximum Budget ($)
+      <input type="number" name="max_budget" value="1500" min="1" required>
+    </label>
+
+    <label>Priority
+      <select name="priority">
+        <option value="performance">Performance</option>
+        <option value="battery">Battery</option>
+        <option value="camera">Camera</option>
+        <option value="value">Value</option>
+      </select>
+    </label>
+
+    <label>Usage
+      <select name="usage">
+        <option value="gaming">Gaming</option>
+        <option value="office">Office</option>
+        <option value="daily">Daily</option>
+      </select>
+    </label>
+
+    <button type="submit">Get Top 3 Recommendations</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-panel glass-card">
+  <div class="hero-glow hero-glow-left"></div>
+  <div class="hero-glow hero-glow-right"></div>
+
+  <div class="hero-content">
+    <p class="hero-badge">AI Powered Product Intelligence</p>
+    <h1>One-click decisions for <span>smarter purchases</span></h1>
+    <p class="hero-subtitle">Analyze price, ratings, and real review signals to get the best products for your budget and priorities.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ url_for('retail') }}">Open Retail App ↗</a>
+      {% if not user %}
+      <a class="btn btn-secondary" href="{{ url_for('signup') }}">Get Started</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="domain-grid">
+  <a class="domain-card active" href="{{ url_for('retail') }}">
+    <p class="card-chip">Live</p>
+    <h3>Retail</h3>
+    <p>AI recommendations for laptops, phones, and accessories based on your priorities.</p>
+  </a>
+  <div class="domain-card disabled"><p class="card-chip">Soon</p><h3>Entertainment</h3><p>Streaming, consoles, and media picks.</p></div>
+  <div class="domain-card disabled"><p class="card-chip">Soon</p><h3>Finance</h3><p>Intelligent decisioning for financial products.</p></div>
+  <div class="domain-card disabled"><p class="card-chip">Soon</p><h3>Hospitality</h3><p>Hotels and dining recommendations, tailored.</p></div>
+  <div class="domain-card disabled"><p class="card-chip">Soon</p><h3>Travel</h3><p>Personalized travel planning recommendations.</p></div>
+  <div class="domain-card disabled"><p class="card-chip">Soon</p><h3>Health</h3><p>Health product and service guidance.</p></div>
+  <div class="domain-card disabled"><p class="card-chip">Soon</p><h3>Education</h3><p>Course and learning path recommendations.</p></div>
+</section>
+{% endblock %}
